@@ -5,8 +5,8 @@
 description
 """
 
-import traceback
 import json
+import traceback
 
 import requests
 from PyQt5 import QtWidgets
@@ -41,6 +41,7 @@ def three_sum(nums):
         res.append((0, 0, 0))
     return res
 
+
 def test_request():
     """
     测试requests
@@ -51,12 +52,12 @@ def test_request():
         'Connection': 'keep-alive',
         'Cache-Control': 'max-age=0',
         'Upgrade-Insecure-requests': '1',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) ' \
-                        'AppleWebKit/537.36 (KHTML, like Gecko) ' \
-                        'Chrome/84.0.4133.0 Safari/537.36 Edg/84.0.508.0',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,' \
-                    'image/webp,image/apng,*/*;' \
-                        'q=0.8,application/signed-exchange;v=b3;q=0.9',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+        'AppleWebKit/537.36 (KHTML, like Gecko) '
+        'Chrome/84.0.4133.0 Safari/537.36 Edg/84.0.508.0',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,'
+        'image/webp,image/apng,*/*;'
+        'q=0.8,application/signed-exchange;v=b3;q=0.9',
         'Sec-Fetch-Site': 'same-origin',
         'Sec-Fetch-Mode': 'navigate',
         'Sec-Fetch-User': '?1',
@@ -67,6 +68,7 @@ def test_request():
     req = requests.get(baseurl, params={'type': 'bilibili'}, headers=headers)
     req.encoding = 'utf-8'
     print(json.loads(req.text))
+
 
 class DownloadUi(QtWidgets.QDialog):
     """
